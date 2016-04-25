@@ -7,4 +7,5 @@ eDojo.org - easy dojo management
 
 [![Build Status](https://travis-ci.org/ottlinger/edojo.svg?branch=master)](https://travis-ci.org/ottlinger/edojo)
 
-[![codecov.io](http://codecov.io/github/ottlinger/edojo/coverage.svg?branch=master)](http://codecov.io/github/ottlinger/edojo?branch=master)
+[![codecov](https://codecov.io/gh/ottlinger/edojo/branch/master/graph/badge.svg)](https://codecov.io/gh/ottlinger/edojo)
+
