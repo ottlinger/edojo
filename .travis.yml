@@ -7,6 +7,9 @@ jdk:
 env:
   - DSPLAY=:0
 
+before_install:
+  - cd backend
+
 before_script:
   - pip install --user codecov
 
