@@ -23,7 +23,8 @@ jar {
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
-defaultTasks 'bootRun'
+// defaultTasks 'bootRun'
+defaultTasks 'test'
 
 
 repositories {
