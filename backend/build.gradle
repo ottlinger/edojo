@@ -61,3 +61,5 @@ eclipse {
 task wrapper(type: Wrapper) {
 	gradleVersion = '3.0'
 }
+
+check.dependsOn jacocoTestReport
