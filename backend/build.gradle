@@ -1,67 +1,40 @@
-buildscript {
-	ext {
-		springBootVersion = '1.5.19.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-		maven { url "https://repo.spring.io/snapshot" }
-		maven { url "https://repo.spring.io/milestone" }
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}") 
-	}
+plugins {
+	id 'org.springframework.boot' version '2.1.5.RELEASE'
+	id 'java'
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot' 
-apply plugin: 'jacoco'
+apply plugin: 'io.spring.dependency-management'
 
-jar {
-	baseName = 'backend'
-	version = '0.0.1-SNAPSHOT'
-}
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-// defaultTasks 'bootRun'
-defaultTasks 'test'
-
+group = 'org.edojo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '12'
 
 repositories {
 	mavenCentral()
-	maven { url "https://repo.spring.io/snapshot" }
-	maven { url "https://repo.spring.io/milestone" }
 }
 
+ext {
+	set('springCloudVersion', "Greenwich.SR1")
+}
 
 dependencies {
-	compile('org.springframework.cloud:spring-cloud-starter-hystrix')
-	compile('org.springframework.boot:spring-boot-starter-data-rest')
-	compile('org.springframework.data:spring-data-rest-hal-browser')
-	compile('org.springframework.boot:spring-boot-starter-remote-shell')
-	compile('org.springframework.boot:spring-boot-starter-security')
-	runtime('com.h2database:h2')
-	testCompile('org.springframework.boot:spring-boot-starter-test') 
+	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.cloud:spring-cloud-starter-netflix-hystrix'
+	implementation 'org.springframework.data:spring-data-rest-hal-browser'
+	runtimeOnly 'com.h2database:h2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
 }
 
 dependencyManagement {
-	imports { 
-		mavenBom "org.springframework.cloud:spring-cloud-dependencies:Brixton.BUILD-SNAPSHOT" 
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
 	}
 }
 
-
-eclipse {
-	classpath {
-		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-		 containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
-	}
-}
-
-task wrapper(type: Wrapper) {
-	gradleVersion = '4.10.2'
-}
+// defaultTasks 'bootRun'
+defaultTasks 'test'
 
 jacocoTestReport {
     reports {
