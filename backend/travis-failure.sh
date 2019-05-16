@@ -4,5 +4,5 @@ echo
 echo "***** ALL TESTS *****"
 ls backend/build/test-results/*.xml
 echo
-echo "***** A SPECIFIC ONE *****"
-cat backend/build/test-results/TEST-de.aikiit.fotocollector.main.JsonOutputWriterTest.xml
+#echo "***** A SPECIFIC ONE *****"
+# cat backend/build/test-results/TEST-de.aikiit.fotocollector.main.JsonOutputWriterTest.xml
