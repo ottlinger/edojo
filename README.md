@@ -9,7 +9,7 @@ eDojo.org - easy dojo management
 
 [![codecov](https://codecov.io/gh/ottlinger/edojo/branch/master/graph/badge.svg)](https://codecov.io/gh/ottlinger/edojo)
 
-### Gradle
+### Gradle updates
 
 Please remember to keep both Gradle properties versions in sync!
 * [gradle-wrapper.properties](./gradle/wrapper/gradle-wrapper.properties)
