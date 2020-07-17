@@ -9,3 +9,6 @@ eDojo.org - easy dojo management
 
 [![codecov](https://codecov.io/gh/ottlinger/edojo/branch/master/graph/badge.svg)](https://codecov.io/gh/ottlinger/edojo)
 
+### Gradle
+
+Please remember to keep both Gradle properties versions in sync!
