@@ -2,7 +2,7 @@ language: java
 sudo: false
 
 jdk:
-  - openjdk12
+  - openjdk14
 env:
   - DSPLAY=:0
 
