@@ -1,7 +1,7 @@
 # edojo
 eDojo.org - easy dojo management
 
-## badges 
+## badges
 
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/2b8e7d8c45d84a03a560d9422ab89f5a)](https://www.codacy.com/app/github_25/edojo)
 
@@ -12,5 +12,5 @@ eDojo.org - easy dojo management
 ### Gradle
 
 Please remember to keep both Gradle properties versions in sync!
-* ./gradle/wrapper/gradle-wrapper.properties
-* ./backend/gradle/wrapper/gradle-wrapper.properties
+* [gradle-wrapper.properties](./gradle/wrapper/gradle-wrapper.properties)
+* [backend/gradle-wrapper.properties](./backend/gradle/wrapper/gradle-wrapper.properties)
