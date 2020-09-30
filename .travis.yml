@@ -22,6 +22,7 @@ before_script:
 
 script:
   - ./gradlew assemble 
+  - ./gradlew jacocoTestReport
 
 test:
     post:
