@@ -12,7 +12,7 @@ env:
   - DSPLAY=:0
 
 before_install:
-  - cd registrar; ls
+  - cd registrar; pwd 
 
 before_script:
   - pip install --user codecov
