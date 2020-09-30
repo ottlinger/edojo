@@ -2,12 +2,12 @@ language: java
 sudo: false
 
 jdk:
-  - openjdk14
+  - openjdk11
 env:
   - DSPLAY=:0
 
 before_install:
-  - cd backend
+  - cd registrar 
 
 before_script:
   - pip install --user codecov
@@ -17,11 +17,11 @@ after_success:
 
 test:
   post:
-  - cd backend; if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
+  - cd registrar; if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
 
 env:
   global:
   - TERM=dumb
   - GRADLE_OPTS="-Xmx768m -Xms256m -XX:MaxPermSize=256m -XX:+CMSClassUnloadingEnabled"
 
-after_failure: ./backend/travis-failure.sh
+# after_failure: ./backend/travis-failure.sh
