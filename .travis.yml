@@ -21,9 +21,12 @@ before_script:
   - chmod +x gradlew
 
 script:
-  - ./gradlew check
-  - ./gradlew codeCoverageReport
+  - ./gradlew assemble 
 
+test:
+    post:
+        - if [ -e ./gradlew ]; then ./gradlew jacocoTestReport;else gradle jacocoTestReport;fi
+        - bash <(curl -s https://codecov.io/bash)
 env:
   global:
 #  - TERM=dumb
