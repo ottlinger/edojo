@@ -23,3 +23,9 @@ This helps solving the problem shown [here](https://stackoverflow.com/questions/
 $ ./grails
 ....
 grails> run-app
+
+
+Go to 
+http://localhost:8080
+to see the app running :)
+
