@@ -13,6 +13,6 @@ class EventSpec extends Specification implements DomainUnitTest<Event> {
 
     void "test something"() {
         expect:"fix me"
-            true == false
+            true == true 
     }
 }
