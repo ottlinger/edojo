@@ -16,3 +16,4 @@ curl -O start.grails.org/registrar.zip -d version=4.0.4
 ### JDK problems
 
 Do not use JDK14 but JDK11 after updating to Gradle 6.6.1.
+This helps solving the problem shown [here](https://stackoverflow.com/questions/61289461/java-lang-noclassdeffounderror-could-not-initialize-class-org-codehaus-groovy-v)
