@@ -3,6 +3,11 @@ package registrar
 class Event {
 
 /*
+BRANDENBURG
+https://bravors.brandenburg.de/verordnungen/sars_cov_2_umgv#9
+
+
+BERLIN
 https://www.berlin.de/corona/massnahmen/verordnung/
 §3 (2)...
  (2) Die Anwesenheitsdokumentation darf ausschließlich zum Vollzug infektionsschutzrechtlicher Vorschriften, insbesondere zur Kontaktnachverfolgung genutzt werden und muss die folgenden Angaben enthalten:
