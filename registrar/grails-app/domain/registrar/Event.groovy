@@ -26,6 +26,7 @@ Die Anwesenheitsdokumentation nach Satz 1 ist für die Dauer von vier Wochen nac
     def name;
     def Date startDate;
     def Date endDate;
+    def Date createdAt;
 
     // TODO         startDate <= endDate
     static constraints = {
