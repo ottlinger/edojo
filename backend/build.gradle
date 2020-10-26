@@ -1,4 +1,5 @@
 plugins {
+// https://spring.io/projects/spring-boot for newer versions
 	id 'org.springframework.boot' version '2.3.4.RELEASE'
 	id 'java'
 }
@@ -7,12 +8,14 @@ apply plugin: 'io.spring.dependency-management'
 
 group = 'org.edojo'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '12'
+sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
 }
 
+// determine correct spring data version:
+// https://spring.io/projects/spring-cloud
 ext {
 	set('springCloudVersion', "Hoxton.SR8")
 }
