@@ -11,7 +11,7 @@ class EventSpec extends Specification implements DomainUnitTest<Event> {
     def cleanup() {
     }
 
-    void "test something"() {
+    void "verify something in order to have any tests"() {
         expect:"fix me"
             true == true 
     }
