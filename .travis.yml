@@ -9,8 +9,9 @@ language: java
 jdk:
   - openjdk11
   - openjdk12
-  - openjdk14
-  - openjdk16
+# does not work with Groovy/Grails
+#  - openjdk14
+#  - openjdk16
 env:
   - DSPLAY=:0
 
