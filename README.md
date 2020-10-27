@@ -16,3 +16,4 @@ eDojo.org - easy dojo management
 Please remember to keep both Gradle properties versions in sync!
 * [gradle-wrapper.properties](./gradle/wrapper/gradle-wrapper.properties)
 * [backend/gradle-wrapper.properties](./backend/gradle/wrapper/gradle-wrapper.properties)
+* [registrar/gradle-wrapper.properties](./registrar/gradle/wrapper/gradle-wrapper.properties)
