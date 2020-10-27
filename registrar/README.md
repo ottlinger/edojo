@@ -11,7 +11,7 @@ curl -O start.grails.org/registrar.zip -d version=4.0.5
 
 ### Project generation
 
-* https://start.grails.org/
+  * https://start.grails.org/
 
 ### JDK problems
 
@@ -31,4 +31,4 @@ to see the app running :)
 
 ## Grails
 
-* https://docs.grails.org/4.0.5/guide/single.html
+  * https://docs.grails.org/4.0.5/guide/single.html
