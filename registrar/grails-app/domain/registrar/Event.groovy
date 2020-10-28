@@ -27,11 +27,13 @@ Die Anwesenheitsdokumentation nach Satz 1 ist für die Dauer von vier Wochen nac
 
 */
 
-    def name;
-    def firstName;
-    def Date startDate;
-    def Date endDate;
-    def Date createdAt;
+    String name;
+    String firstName;
+
+
+    Date startDate;
+    Date endDate;
+    Date createdAt;
 
     // TODO         startDate <= endDate
     static constraints = {
