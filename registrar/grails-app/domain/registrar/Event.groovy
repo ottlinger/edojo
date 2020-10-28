@@ -7,6 +7,10 @@ BRANDENBURG
 https://bravors.brandenburg.de/verordnungen/sars_cov_2_umgv#9
 
 
+https://mbjs.brandenburg.de/kinder-und-jugend/weitere-themen/corona-aktuell.html
+
+Personendaten sind der Vor- und Familienname und die Telefonnummer oder E-Mail-Adresse der Betroffenen. Bei der Erfassung dieser Daten ist zu verhindern, dass Betroffene Kenntnis von personenbezogenen Daten anderer Betroffener erhalten. Der Anwesenheitsnachweis ist für die Dauer von vier Wochen unter Einhaltung datenschutzrechtlicher Vorschriften aufzubewahren oder zu speichern und auf Verlangen an das zuständige Gesundheitsamt herauszugeben. Nach Ablauf der Aufbewahrungsfrist ist der Anwesenheitsnachweis zu vernichten oder zu löschen.
+
 BERLIN
 https://www.berlin.de/corona/massnahmen/verordnung/
 §3 (2)...
