@@ -27,13 +27,17 @@ https://www.berlin.de/corona/massnahmen/verordnung/
 Die Anwesenheitsdokumentation nach Satz 1 ist für die Dauer von vier Wochen nach Ende der Veranstaltung oder Inanspruchnahme einer Dienstleistung geschützt vor Einsichtnahme durch Dritte aufzubewahren oder zu speichern. Die Anwesenheitsdokumentation ist den zuständigen Behörden zur Kontrolle der Verpflichtungen nach Absatz 1, 3 und 4 auf Verlangen zugänglich zu machen. Darüber hinaus ist den zuständigen Behörden auf Verlangen die Anwesenheitsdokumentation auszuhändigen oder ihnen auf sonstige geeignete Weise der Zugriff zu ermöglichen, wenn festgestellt wird, dass eine Person zum Zeitpunkt der Veranstaltung, des Besuchs oder der Inanspruchnahme der Dienstleistung krank, krankheitsverdächtig, ansteckungsverdächtig oder Ausscheiderin oder Ausscheider im Sinne des Infektionsschutzgesetzes war. Nach Ablauf der Aufbewahrungsfrist ist die Anwesenheitsdokumentation zu löschen oder zu vernichten.
 
 */
-    String name;
     String firstName;
+    String name;
     String telephoneContact;
-    String email;
+    String emailContact;
 
     Date createdAt;
 
     static constraints = {
+        name minSize: 1, maxSize: 256, nullable: false
+        firstName minSize: 1, maxSize: 256, nullable: false
+        telephoneContact maxSize: 50, nullable: false
+        emailContact: email:true
     }
 }
