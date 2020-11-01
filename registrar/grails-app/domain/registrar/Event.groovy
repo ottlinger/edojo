@@ -30,7 +30,6 @@ Die Anwesenheitsdokumentation nach Satz 1 ist für die Dauer von vier Wochen nac
     String name;
     String firstName;
 
-
     Date startDate;
     Date endDate;
     Date createdAt;
