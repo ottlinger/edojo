@@ -7,9 +7,12 @@ class Event {
     String description;
     LocalDateTime startDate;
     LocalDateTime endDate;
-    Date createdAt;
+    Boolean wholeDay = Boolean.FALSE;
 
     // TODO         startDate <= endDate
     static constraints = {
+        description blank:false, unique: true
+        startDate nullable: false
+        endDate: nullable:false // validator: {startDate, endDate -> startDate<=endDate || endDate == startDate}
     }
 }
