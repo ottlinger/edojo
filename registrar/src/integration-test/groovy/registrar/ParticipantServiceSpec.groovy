@@ -25,7 +25,7 @@ class ParticipantServiceSpec extends Specification {
         //new Participant(...).save(flush: true, failOnError: true)
         //new Participant(...).save(flush: true, failOnError: true)
 
-        Participant participant = new Participant(firstName: "D.J.", name: "Trumpet", email: "fake@news.org").save(flush: true, failOnError: true)
+        Participant participant = new Participant(firstName: "D.J.", name: "Trumpet", email: "fake@news.org", telephoneContact: "+440987").save(flush: true, failOnError: true)
         participant.id
     }
 
