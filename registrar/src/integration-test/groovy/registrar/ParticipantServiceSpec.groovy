@@ -25,7 +25,7 @@ class ParticipantServiceSpec extends Specification {
         //new Participant(...).save(flush: true, failOnError: true)
         //new Participant(...).save(flush: true, failOnError: true)
 
-        Participant participant = new Participant(firstName: "D.J.", name: "Trumpet").save(flush: true, failOnError: true)
+        Participant participant = new Participant(firstName: "D.J.", name: "Trumpet", email: "fake@news.org").save(flush: true, failOnError: true)
         participant.id
     }
 
@@ -70,8 +70,7 @@ class ParticipantServiceSpec extends Specification {
 
     void "test save"() {
         when:
-        assert false, "TODO: Provide a valid instance to save"
-        Participant participant = new Participant()
+        Participant participant = new Participant(firstName: "Борат Маргарет", name: "Сағдиев", email: "nonews@fake.org").save(flush: true, failOnError: true)
         participantService.save(participant)
 
         then:
