@@ -18,11 +18,7 @@ class EventServiceSpec extends Specification {
         Event event = new Event(description: "D1", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: true)
         event.save(flush: true, failOnError: true)
 
-        //new Event(...).save(flush: true, failOnError: true)
-        //new Event(...).save(flush: true, failOnError: true)
-        //Event event = new Event(...).save(flush: true, failOnError: true)
-        //new Event(...).save(flush: true, failOnError: true)
-        //new Event(...).save(flush: true, failOnError: true)
+        new Event(description: "D2", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: false).save(flush: true, failOnError: true)
 
         event.id
     }
@@ -42,7 +38,8 @@ class EventServiceSpec extends Specification {
 
         then:
         eventList.size() == 2
-        assert false, "TODO: Verify the correct instances are returned"
+        eventList.get(0).description == "D1"
+        eventList.get(1).description == "D2"
     }
 
     void "test count"() {
