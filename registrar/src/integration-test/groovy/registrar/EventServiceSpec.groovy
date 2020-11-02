@@ -5,6 +5,8 @@ import grails.gorm.transactions.Rollback
 import spock.lang.Specification
 import org.hibernate.SessionFactory
 
+import java.time.LocalDateTime
+
 @Integration
 @Rollback
 class EventServiceSpec extends Specification {
@@ -14,13 +16,15 @@ class EventServiceSpec extends Specification {
 
     private Long setupData() {
         // TODO: Populate valid domain instances and return a valid ID
+        Event event = new Event(description: "D1", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
+
         //new Event(...).save(flush: true, failOnError: true)
         //new Event(...).save(flush: true, failOnError: true)
         //Event event = new Event(...).save(flush: true, failOnError: true)
         //new Event(...).save(flush: true, failOnError: true)
         //new Event(...).save(flush: true, failOnError: true)
-        assert false, "TODO: Provide a setupData() implementation for this generated test suite"
-        //event.id
+
+        event.id
     }
 
     void "test get"() {

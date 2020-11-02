@@ -13,6 +13,6 @@ class Event {
     static constraints = {
         description blank:false, unique: true
         startDate nullable: false
-        endDate: nullable:false // validator: {startDate, endDate -> startDate<=endDate || endDate == startDate}
+        endDate: nullable: false // validator: {startDate, endDate -> startDate<=endDate || endDate == startDate}
     }
 }
