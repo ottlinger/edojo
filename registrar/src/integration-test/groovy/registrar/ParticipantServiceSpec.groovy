@@ -25,7 +25,7 @@ class ParticipantServiceSpec extends Specification {
         //new Participant(...).save(flush: true, failOnError: true)
         //new Participant(...).save(flush: true, failOnError: true)
 
-        Participant participant = new Participant(firstName: "D.J.", name: "Trumpet", email: "fake@news.org", telephoneContact: "+440987").save(flush: true, failOnError: true)
+        Participant participant = new Participant(firstName: "D.J.", name: "Trumpet", emailContact: "fake@news.org", telephoneContact: "+440987").save(flush: true, failOnError: true)
         participant.id
     }
 
@@ -70,7 +70,7 @@ class ParticipantServiceSpec extends Specification {
 
     void "test save"() {
         when:
-        Participant participant = new Participant(firstName: "Борат Маргарет", name: "Сағдиев", email: "nonews@fake.org").save(flush: true, failOnError: true)
+        Participant participant = new Participant(firstName: "Борат Маргарет", name: "Сағдиев", emailContact: "nonews@fake.org", telephoneContact: "+43120").save(flush: true, failOnError: true)
         participantService.save(participant)
 
         then:
