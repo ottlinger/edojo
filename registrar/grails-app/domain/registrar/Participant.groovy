@@ -34,7 +34,7 @@ Die Anwesenheitsdokumentation nach Satz 1 ist für die Dauer von vier Wochen nac
 
     static constraints = {
         name minSize: 1, maxSize: 256, nullable: false, blank: false
-        firstName minSize: 1, maxSize: 256, nullable: false, blank: false
+        firstName minSize: 1, maxSize: 200, nullable: false, blank: false
         telephoneContact maxSize: 50, nullable: false, blank: false
         emailContact email:true
     }
