@@ -1,9 +1,9 @@
 package registrar
 
-import grails.testing.mixin.integration.Integration
 import grails.gorm.transactions.Rollback
-import spock.lang.Specification
+import grails.testing.mixin.integration.Integration
 import org.hibernate.SessionFactory
+import spock.lang.Specification
 
 import java.time.LocalDateTime
 
@@ -15,8 +15,8 @@ class EventServiceSpec extends Specification {
     SessionFactory sessionFactory
 
     private Long setupData() {
-        // TODO: Populate valid domain instances and return a valid ID
-        Event event = new Event(description: "D1", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
+        Event event = new Event(description: "D1", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: true)
+        event.save(flush: true, failOnError: true)
 
         //new Event(...).save(flush: true, failOnError: true)
         //new Event(...).save(flush: true, failOnError: true)
@@ -68,8 +68,7 @@ class EventServiceSpec extends Specification {
 
     void "test save"() {
         when:
-        assert false, "TODO: Provide a valid instance to save"
-        Event event = new Event()
+        Event event = new Event(description: "readyForSaving", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: true)
         eventService.save(event)
 
         then:
