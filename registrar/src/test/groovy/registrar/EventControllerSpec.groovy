@@ -4,15 +4,18 @@ import grails.testing.gorm.DomainUnitTest
 import grails.testing.web.controllers.ControllerUnitTest
 import grails.validation.ValidationException
 import spock.lang.*
+import registrar.EventService;
+
+import java.time.LocalDate
 
 class EventControllerSpec extends Specification implements ControllerUnitTest<EventController>, DomainUnitTest<Event> {
 
     def populateValidParams(params) {
         assert params != null
 
-        // TODO: Populate valid properties like...
         //params["name"] = 'someValidName'
-        assert false, "TODO: Provide a populateValidParams() implementation for this generated test suite"
+        params["description"] = 'just a test description ' + Math.random();
+        params["startDate"] = LocalDate.now();
     }
 
     void "Test the index action returns the correct model"() {
