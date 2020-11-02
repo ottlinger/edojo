@@ -13,14 +13,20 @@ class ParticipantServiceSpec extends Specification {
     SessionFactory sessionFactory
 
     private Long setupData() {
-        // TODO: Populate valid domain instances and return a valid ID
+        /*
+            String firstName;
+    String name;
+    String telephoneContact;
+    String emailContact;
+         */
+
         //new Participant(...).save(flush: true, failOnError: true)
         //new Participant(...).save(flush: true, failOnError: true)
-        //Participant participant = new Participant(...).save(flush: true, failOnError: true)
         //new Participant(...).save(flush: true, failOnError: true)
         //new Participant(...).save(flush: true, failOnError: true)
-        assert false, "TODO: Provide a setupData() implementation for this generated test suite"
-        //participant.id
+
+        Participant participant = new Participant(firstName: "D.J.", name: "Trumpet").save(flush: true, failOnError: true)
+        participant.id
     }
 
     void "test get"() {
