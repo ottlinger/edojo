@@ -1,9 +1,9 @@
 package registrar
 
-import grails.testing.mixin.integration.Integration
 import grails.gorm.transactions.Rollback
-import spock.lang.Specification
+import grails.testing.mixin.integration.Integration
 import org.hibernate.SessionFactory
+import spock.lang.Specification
 
 @Integration
 @Rollback
@@ -13,17 +13,10 @@ class ParticipantServiceSpec extends Specification {
     SessionFactory sessionFactory
 
     private Long setupData() {
-        /*
-            String firstName;
-    String name;
-    String telephoneContact;
-    String emailContact;
-         */
-
-        //new Participant(...).save(flush: true, failOnError: true)
-        //new Participant(...).save(flush: true, failOnError: true)
-        //new Participant(...).save(flush: true, failOnError: true)
-        //new Participant(...).save(flush: true, failOnError: true)
+        new Participant(firstName: "Joe", name: "Bydkowicz", emailContact: "joe@news.org", telephoneContact: "+4409876").save(flush: true, failOnError: true)
+        new Participant(firstName: "Joanna", name: "Bydkowicz", emailContact: "joa@news.org", telephoneContact: "+44098765").save(flush: true, failOnError: true)
+        new Participant(firstName: "Jill", name: "Bydkowicz", emailContact: "jill@news.org", telephoneContact: "+44098764").save(flush: true, failOnError: true)
+        new Participant(firstName: "J.R.", name: "Bydkowicz", emailContact: "jr@news.org", telephoneContact: "+44098763").save(flush: true, failOnError: true)
 
         Participant participant = new Participant(firstName: "D.J.", name: "Trumpet", emailContact: "fake@news.org", telephoneContact: "+440987").save(flush: true, failOnError: true)
         participant.id
@@ -44,7 +37,10 @@ class ParticipantServiceSpec extends Specification {
 
         then:
         participantList.size() == 2
-        assert false, "TODO: Verify the correct instances are returned"
+        participantList.get(0).firstName == "Jill"
+        participantList.get(0).name == "Bydkowicz"
+        participantList.get(1).firstName == "J.R."
+        participantList.get(1).name == "Bydkowicz"
     }
 
     void "test count"() {

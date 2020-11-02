@@ -37,6 +37,6 @@ Die Anwesenheitsdokumentation nach Satz 1 ist für die Dauer von vier Wochen nac
         firstName minSize: 1, nullable: false, blank: false, maxSize: 256
         // TODO either tel or mail must not be blank/null
         telephoneContact maxSize: 50
-        emailContact email:true
+        emailContact email: true
     }
 }
