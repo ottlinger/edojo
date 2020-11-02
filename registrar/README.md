@@ -25,6 +25,11 @@ This helps solving the problem shown [here](https://stackoverflow.com/questions/
 $ ./grails
 ....
 grails> run-app
+
+or
+
+$ ./gradlew bootJar
+$ java -jar build/libs/registrar-0.1.jar
 ```
 
 Go to
