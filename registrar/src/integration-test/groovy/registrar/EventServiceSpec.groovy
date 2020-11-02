@@ -19,7 +19,7 @@ class EventServiceSpec extends Specification {
         new Event(description: "D1", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
         new Event(description: "D2", startDate: LocalDateTime.parse("2020-10-31T01:02:03", DateTimeFormatter.ISO_LOCAL_DATE_TIME), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
         new Event(description: "D3", startDate: LocalDateTime.parse("2020-10-30T01:02:03", DateTimeFormatter.ISO_LOCAL_DATE_TIME), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
-        new Event(description: "D4", startDate: LocalDateTime.parse("2020-10-29T01:02:03", DateTimeFormatter.ISO_LOCAL_DATE_TIME), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
+        new Event(description: "D4", startDate: LocalDateTime.parse("2020-10-29T01:02:03", DateTimeFormatter.ISO_LOCAL_DATE_TIME), endDate: LocalDateTime.now(), wholeDay: false).save(flush: true, failOnError: true)
 
         Event event = new Event(description: "D0", startDate: LocalDateTime.now(), endDate: LocalDateTime.now())
         event.save(flush: true, failOnError: true)
@@ -41,8 +41,10 @@ class EventServiceSpec extends Specification {
 
         then:
         eventList.size() == 2
-        eventList.get(0).description == "D1"
-        eventList.get(1).description == "D2"
+        eventList.get(0).description == "D3"
+        eventList.get(0).wholeDay
+        eventList.get(1).description == "D4"
+        !eventList.get(1).wholeDay
     }
 
     void "test count"() {
