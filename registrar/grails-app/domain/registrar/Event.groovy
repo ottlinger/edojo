@@ -7,7 +7,7 @@ class Event {
     String description;
     LocalDateTime startDate;
     LocalDateTime endDate;
-    Boolean wholeDay = Boolean.FALSE;
+    Boolean wholeDay = false;
 
     // TODO         startDate <= endDate
     static constraints = {
