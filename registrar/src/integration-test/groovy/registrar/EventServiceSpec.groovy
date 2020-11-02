@@ -6,6 +6,7 @@ import org.hibernate.SessionFactory
 import spock.lang.Specification
 
 import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 @Integration
 @Rollback
@@ -15,11 +16,13 @@ class EventServiceSpec extends Specification {
     SessionFactory sessionFactory
 
     private Long setupData() {
-        Event event = new Event(description: "D1", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: true)
+        new Event(description: "D1", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
+        new Event(description: "D2", startDate: LocalDateTime.parse("2020-10-31T01:02:03", DateTimeFormatter.ISO_LOCAL_DATE_TIME), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
+        new Event(description: "D3", startDate: LocalDateTime.parse("2020-10-30T01:02:03", DateTimeFormatter.ISO_LOCAL_DATE_TIME), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
+        new Event(description: "D4", startDate: LocalDateTime.parse("2020-10-29T01:02:03", DateTimeFormatter.ISO_LOCAL_DATE_TIME), endDate: LocalDateTime.now(), wholeDay: true).save(flush: true, failOnError: true)
+
+        Event event = new Event(description: "D0", startDate: LocalDateTime.now(), endDate: LocalDateTime.now())
         event.save(flush: true, failOnError: true)
-
-        new Event(description: "D2", startDate: LocalDateTime.now(), endDate: LocalDateTime.now(), wholeDay: false).save(flush: true, failOnError: true)
-
         event.id
     }
 
