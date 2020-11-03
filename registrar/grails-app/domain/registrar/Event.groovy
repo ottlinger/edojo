@@ -5,6 +5,7 @@ import java.time.LocalDateTime
 class Event {
 
     String description
+    // https://github.com/blemoine/java8-temporal-grails-plugin / https://plugins.grails.org/plugin/grails/grails-java8
     LocalDateTime startDate
     LocalDateTime endDate
     Boolean wholeDay = false

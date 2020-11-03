@@ -42,6 +42,10 @@ configurations {
 }
 
 dependencies {
+    // Plugins
+    // https://plugins.grails.org/plugin/grails/grails-java8
+    compile 'org.grails.plugins:grails-java8:1.2.3'
+
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
