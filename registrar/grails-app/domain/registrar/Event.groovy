@@ -4,10 +4,10 @@ import java.time.LocalDateTime
 
 class Event {
 
-    String description;
-    LocalDateTime startDate;
-    LocalDateTime endDate;
-    Boolean wholeDay = false;
+    String description
+    LocalDateTime startDate
+    LocalDateTime endDate
+    Boolean wholeDay = false
 
     // TODO         startDate <= endDate
     static constraints = {
