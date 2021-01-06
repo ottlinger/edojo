@@ -5,7 +5,7 @@ eDojo.org - easy dojo management
 
 ## badges
 
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/2b8e7d8c45d84a03a560d9422ab89f5a)](https://www.codacy.com/app/github_25/edojo)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/f5228b9485384f93aa4b968e56c708af)](https://www.codacy.com/gh/ottlinger/edojo/dashboard)
 
 [![Build Status](https://travis-ci.org/ottlinger/edojo.svg?branch=master)](https://travis-ci.org/ottlinger/edojo)
 
