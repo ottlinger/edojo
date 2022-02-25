@@ -1,6 +1,6 @@
 plugins {
 // https://spring.io/projects/spring-boot for newer versions
-	id 'org.springframework.boot' version '2.6.3'
+	id 'org.springframework.boot' version '2.6.4'
 	id 'java'
 }
 
