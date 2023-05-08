@@ -23,4 +23,6 @@ These additional references should also help you:
 
 # Update Wrapper
 
-./gradlew wrapper --gradle-version 5.5
+./gradlew wrapper --gradle-version 8.1.1
+Adapt gradle/wrapper/gradle-wrapper.properties manually 
+
