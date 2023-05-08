@@ -31,4 +31,4 @@ jobs:
         with:
           arguments: build
           gradle-version: 8.1.1
-#          build-root-directory: ./backend/
+          build-root-directory: ./backend/
