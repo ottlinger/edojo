@@ -28,5 +28,4 @@ jobs:
         with:
           arguments: build
           gradle-version: 8.1.1
-          # main class is not properly found on GHA
           build-root-directory: ./backend/
