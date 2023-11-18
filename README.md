@@ -5,7 +5,7 @@ eDojo.org - easy dojo management
 
 ## badges
 
-[![Github Action master branch status](https://github.com/ottlinger/edojo/actions/workflows/maven.yml/badge.svg?branch=master)](https://github.com/ottlinger/edojo/actions)
+[![Github Action master branch status](https://github.com/ottlinger/edojo/actions/workflows/backend.yml/badge.svg?branch=master)](https://github.com/ottlinger/edojo/actions)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/f5228b9485384f93aa4b968e56c708af)](https://www.codacy.com/gh/ottlinger/edojo/dashboard)
 
