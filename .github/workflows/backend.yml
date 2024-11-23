@@ -23,9 +23,10 @@ jobs:
           distribution: 'temurin'
       - name: Validate Gradle wrapper
         uses: gradle/actions/wrapper-validation@v3
-      - name: Build with Gradle
-        uses: gradle/actions/setup-gradle@v3
+      - name: Setup with Gradle
+        uses: gradle/actions/setup-gradle@v4
         with:
-          arguments: build
-          gradle-version: 8.10
-          build-root-directory: ./backend/
+          gradle-version: "8.10"
+      - name: Run build in a subdirectory
+        working-directory: ./backend/
+        run: ./gradlew build
