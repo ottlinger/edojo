@@ -1,5 +1,5 @@
 # edojo
-eDojo.org - easy dojo management
+eDojo.org - easy Dojo Management
 
 ![Logo](./assets/edojoTransparentSmall.png)
 
