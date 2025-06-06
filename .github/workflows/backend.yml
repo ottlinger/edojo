@@ -22,7 +22,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
       - name: Validate Gradle wrapper
-        uses: gradle/actions/wrapper-validation@v3
+        uses: gradle/actions/wrapper-validation@v4
       - name: Setup with Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
@@ -30,3 +30,8 @@ jobs:
       - name: Run build in a subdirectory
         working-directory: ./backend/
         run: ./gradlew build
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+         token: ${{ secrets.CODECOV_TOKEN }}
+         slug: ottlinger/edojo
