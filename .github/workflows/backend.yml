@@ -26,7 +26,7 @@ jobs:
       - name: Setup with Gradle
         uses: gradle/actions/setup-gradle@v5
         with:
-          gradle-version: "8.14.3"
+          gradle-version: "9.0.0"
       - name: Run build in a subdirectory
         working-directory: ./backend/
         run: ./gradlew build
