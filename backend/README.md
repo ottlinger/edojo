@@ -23,6 +23,7 @@ These additional references should also help you:
 
 # Update Wrapper
 
-./gradlew wrapper --gradle-version 8.1.1
-Adapt gradle/wrapper/gradle-wrapper.properties manually 
+* ./gradlew wrapper --gradle-version 9.0.0 
+* Adapt gradle/wrapper/gradle-wrapper.properties manually 
+* Adapt GHA version in workflow yml
 
