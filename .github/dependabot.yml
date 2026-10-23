@@ -6,6 +6,10 @@
 version: 2
 updates:
   - package-ecosystem: "gradle" # See documentation for possible values
+    directory: "/" 
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "gradle"
     directory: "/backend" # Location of package manifests
     schedule:
       interval: "daily"
